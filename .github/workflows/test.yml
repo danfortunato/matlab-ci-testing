@@ -10,6 +10,10 @@ jobs:
       - name: Install MATLAB
         uses: matlab-actions/setup-matlab@v2
         with:
-          cache: true
+          cache: false
+      - name: Run commands
+        uses: matlab-actions/run-command@v2
+        with:
+          command: disp(getenv('MLM_LICENSE_TOKEN')); disp(license);
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
