@@ -9,5 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install MATLAB
         uses: matlab-actions/setup-matlab@v2
+        with:
+          cache: true
       - name: Run commands
-        run: cat "/Users/runner/hostedtoolcache/MATLAB/2023.2.999/x64/MATLAB.app/licenses/license.dat"
+        run: ls "/Users/runner/hostedtoolcache/MATLAB/2023.2.999/x64/MATLAB.app/licenses"
