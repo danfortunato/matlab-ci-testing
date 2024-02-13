@@ -12,4 +12,7 @@ jobs:
         with:
           cache: true
       - name: Run commands
-        run: ls "/Users/runner/hostedtoolcache/MATLAB/2023.2.999/x64/MATLAB.app/licenses"
+        uses: matlab-actions/run-command@v2
+        with:
+          command: disp(matlabroot); ls(matlabroot);
+
